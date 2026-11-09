@@ -4,8 +4,6 @@ I no longer really play the game, so ongoing updates and fixes are unlikely.
 
 # Gift Select All Pages
 
-Selects all gift-eligible friends across every page, with Select None clearing the full selection.
-
 <!-- drh:show -->
 Selects all gift-eligible friends across every page, with Select None clearing the full selection.
 - Select All includes eligible friends across every page, including the last entry.
