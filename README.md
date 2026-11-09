@@ -8,11 +8,10 @@ Selects all gift-eligible friends across every page, with Select None clearing t
 
 <!-- drh:show -->
 Selects all gift-eligible friends across every page, with Select None clearing the full selection.
-<!-- /drh:show -->
-
 - Select All includes eligible friends across every page, including the last entry.
 - Select None clears the full selection and updates the current page.
 - Respects the game's gift eligibility rules; gifts are sent through the normal controls.
+<!-- /drh:show -->
 
 The Friends tab shares its selection with other actions, including Remove. Choose the intended action after selecting friends.
 
