@@ -3,7 +3,7 @@ package mods.gift_select_all_pages;
 import mods.api.Context;
 import mods.api.Mod;
 import facade.DBFacade;
-import collections.Map;
+import collections.Map as GameMap;
 import account.FriendInfo;
 import brain.uI.UIButton;
 import brain.uI.UIToggleButton;
@@ -55,7 +55,7 @@ class Main extends Mod {
             var manager:Dynamic = Reflect.field(social, "mUIFriendManager");
             var next:Dynamic = null;
             if (manager != null && manager.currentState == 1) {
-                var states:Map = cast Reflect.field(manager, "states");
+                var states:GameMap = cast Reflect.field(manager, "states");
                 var friends:Dynamic = states == null ? null : states.itemFor(1);
                 if (friends != null) next = Reflect.field(friends, "mFriendPopulater");
             }
@@ -83,7 +83,7 @@ class Main extends Mod {
     function selectAll():Void {
         if (list == null) return;
         var friends:Dynamic = Reflect.field(list, "mListOfFriends");
-        var selected:Map = cast Reflect.field(list, "mFriendsSelectedAcrossPages");
+        var selected:GameMap = cast Reflect.field(list, "mFriendsSelectedAcrossPages");
         if (friends == null || selected == null) return;
         var excluded = facade.dbAccountInfo.giftExcludeIds;
         selected.clear();
@@ -101,7 +101,7 @@ class Main extends Mod {
 
     function selectNone():Void {
         if (list == null) return;
-        var selected:Map = cast Reflect.field(list, "mFriendsSelectedAcrossPages");
+        var selected:GameMap = cast Reflect.field(list, "mFriendsSelectedAcrossPages");
         if (selected == null) return;
         selected.clear();
         Reflect.setField(list, "SelectAllButtonSelected", false);
@@ -110,8 +110,8 @@ class Main extends Mod {
         context.log("cleared selection across all pages");
     }
 
-    function refreshVisible(selected:Map):Void {
-        var toggles:Map = cast Reflect.field(list, "mFriendSelectedToggles");
+    function refreshVisible(selected:GameMap):Void {
+        var toggles:GameMap = cast Reflect.field(list, "mFriendSelectedToggles");
         var slots:Dynamic = Reflect.field(list, "mListOfFriendSlots");
         var page:Int = Reflect.field(list, "mCurrentPage");
         if (toggles == null || slots == null) return;
