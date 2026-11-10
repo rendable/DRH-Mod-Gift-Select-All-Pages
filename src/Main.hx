@@ -1,4 +1,4 @@
-package mods.gift_select_all;
+package mods.gift_select_all_pages;
 
 import mods.api.Context;
 import mods.api.Mod;

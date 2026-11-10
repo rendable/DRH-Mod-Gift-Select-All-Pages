@@ -1,5 +1,5 @@
 {
-  "id": "gift_select_all",
+  "id": "gift_select_all_pages",
   "name": "Gift Select All Pages",
   "description": "Selects all gift-eligible friends across every page, with Select None clearing the full selection.",
   "version": "0.1.0",
